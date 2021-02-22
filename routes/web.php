@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//  Route Resource Controller
+Route::resource('albums', 'AlbumController');
+Route::resource('artists', 'ArtistController');
+Route::resource('genres', 'GenreController');
