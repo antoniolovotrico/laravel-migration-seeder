@@ -14,7 +14,8 @@ class ArtistController extends Controller
      */
     public function index()
     {
-        //
+        
+        return view('artists.index');
     }
 
     /**

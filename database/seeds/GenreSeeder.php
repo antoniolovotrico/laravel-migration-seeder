@@ -1,5 +1,6 @@
 <?php
 
+use App\Genre;
 use Illuminate\Database\Seeder;
 
 class GenreSeeder extends Seeder
@@ -11,6 +12,11 @@ class GenreSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $genres = config('genre_db');
+        foreach ($genres as $genre) {
+            $newGenre = new Genre();
+            $newGenre -> name = $genre['name'];
+            $newGenre -> save();
+        }
     }
 }

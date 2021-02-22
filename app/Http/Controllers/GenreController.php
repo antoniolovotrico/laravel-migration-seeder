@@ -14,7 +14,8 @@ class GenreController extends Controller
      */
     public function index()
     {
-        //
+        $genres = config('genre_db');
+        return view('genres.index', compact('genres'));
     }
 
     /**

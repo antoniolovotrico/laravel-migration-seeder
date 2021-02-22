@@ -1,0 +1,18 @@
+// Mixins
+@mixin reset {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@mixin flex_wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    flex-basis: 100vh;
+    align-items: center;    
+}
+@mixin flex_container($direction, $basis){
+    display: flex;
+    flex-direction: $direction;
+    flex-basis: $basis;  
+}
